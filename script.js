@@ -82,7 +82,7 @@ function loading() {
     opacity: 0,
   });
 }
-// loading();
+loading();
 const videoBtn = document.querySelector(".videoBtn");
 let videoContainer = document.querySelector(".videocontent");
 videoContainer.addEventListener("mouseenter", function () {
