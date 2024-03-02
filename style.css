@@ -17,6 +17,7 @@ body {
 main{
   position: relative;
 }
+
 #crsr {
   height: 45px;
   width: 45px;
@@ -65,14 +66,21 @@ main{
   font-family: "Silk Serif";
   font-weight: 500;
   font-size: 6.8vw;
+  /* background-color: red; */
+}
+.line h1:nth-child(1){
+  height: 15vh;
+  /* background-color: green; */
 }
 .line span {
   margin-left: 10px;
   text-align: center;
+  /* background-color: red; */
 }
 .line span h1 {
   display: inline-block;
-  height: 0px;
+  font-size: 6.5vw;
+  margin-left: 1vw;
   opacity: 0;
   animation: animate 2s ease-in infinite;
 }
@@ -152,7 +160,7 @@ nav .navPart2 h3 {
   text-transform: uppercase;
   font-family: "silk serif";
   font-weight: 100;
-  font-size: 0.8vw;
+  font-size: 1vw;
 }
 .heroline {
   margin-left: 28%;
@@ -216,18 +224,19 @@ nav .navPart2 h3 {
   position: relative;
   width: 70vw;
   margin-left: 28%;
-  height: 80vh;
+  height: 85vh;
 }
 .videocontent img {
   position: absolute;
-  height: 100%;
+  height: 110%;
   width: 100%;
   z-index: 2;
 }
 .videocontent video {
   position: relative;
-  height: 100%;
+  height: 99%;
   width: 100%;
+  display: none;
 }
 .videoBtn {
   z-index: 999;
@@ -569,5 +578,4 @@ nav .navPart2 h3 {
 z-index: 999999 !important;
 pointer-events: none;
 }
-
 
