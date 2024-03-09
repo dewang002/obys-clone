@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,30 +18,34 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="crsr"></div>
-    <!-- <div class="loader">
-      <div class="line">
-        <div class="line1">
-          <div class="number">
-            <h6>00</h6>
-            <h5>-100</h5>
-          </div>
+    <div id="flag">
+      <div class="top"></div>
+      <div class="mid"></div>
+      <div class="bottom"></div>
+    </div>
+    <div class="loader">
+        <div class="line">
+            <div class="line1">
+                <div class="number">
+                <h6>00 </h6>
+                <h5> -100</h5>
+                </div>
           <h1>YOUR</h1>
         </div>
+          </div>
+        <div class="line">
+          <h1>WEB EXPERIENCES</h1>
+          </div>
+        <div class="line">
+         <h1>IS LOADIGN RIGHT<span><h1>NOW</h1></span></h1>
+          </div>
+          <P>please wait a sec</P>
       </div>
-      <div class="line">
-        <h1>WEB EXPERIENCES</h1>
-      </div>
-      <div class="line">
-        <h1>
-          IS LOADIGN RIGHT<span><h1>NOW</h1></span>
-        </h1>
-      </div>
-      <p>please wait a sec</p>
-    </div> -->
     <main>
       <div id="page1" data-scroll>
         <nav>
@@ -149,21 +152,29 @@
       <div id="page2">
         <div class="videocontent">
           <div class="videoBtn">
-            <img  src="icons8-play-50.png" alt="" />
+            <img src="./ASSET/PHOTO AND VIDEO/icons8-play-50.png" alt="" />
+            <i class="ri-pause-line"></i>
           </div>
-          <img id="mainImg" src="Showreel-2022-preview-1.jpg" alt="" />
-          <video  src="Obys-Showreel-2022.mp4"></video>
+          <img
+            id="mainImg"
+            src="./ASSET/PHOTO AND VIDEO/Showreel-2022-preview-1.jpg"
+            alt=""
+          />
+          <video
+            loop
+            src="./ASSET/PHOTO AND VIDEO/Obys-Showreel-2022.mp4"
+          ></video>
         </div>
       </div>
-      <div id="page6" data-scroll data-scroll-speed="2.5">
+      <div id="page6" data-scroll>
         <div class="header">
           <h1>OUR PROJECT</h1>
           <div class="underline"></div>
         </div>
         <div class="imgcontainer">
           <div class="imgdiv">
-            <img src="loading.jpg" alt="" />
-            <img src="underloader.jpg" alt="" />
+            <img src="./ASSET/PHOTO AND VIDEO/loading.jpg" alt="" />
+            <img src="./ASSET/PHOTO AND VIDEO/underloader.jpg" alt="" />
           </div>
           <div class="circular">
             <i class="ri-arrow-left-line"></i>
@@ -180,8 +191,8 @@
             </div>
           </div>
           <div class="imgdiv">
-            <img src="second.jpg" alt="" />
-            <img src="first.jpg" alt="" />
+            <img src="./ASSET/PHOTO AND VIDEO/second.jpg" alt="" />
+            <img src="./ASSET/PHOTO AND VIDEO/first.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -195,11 +206,14 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             totam fugiat quibusdam ex, nostrum culpa exercitationem quae iste
             veritatis voluptatibus, rem eligendi, reprehenderit ad beatae
-            distinctio impedit obcaecati repellendus facilis.
+            distinctio impedit.
           </h1>
         </div>
         <div class="imgdet">
-          <img src="yogesh-pedamkar-9TsG9DSRBN4-unsplash.jpg" alt="" />
+          <img
+            src="./ASSET/PHOTO AND VIDEO/yogesh-pedamkar-9TsG9DSRBN4-unsplash.jpg"
+            alt=""
+          />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
             consectetur quaerat obcaecati repellat asperiores illum cupiditate
@@ -255,6 +269,7 @@
         <div class="header">
           <h1>LET'S CREATE</h1>
         </div>
+        <div class="underline"></div>
         <div class="details">
           <div class="social">
             <h4>YOUTUBE</h4>
@@ -273,6 +288,7 @@
             <h5><a href="mailto: info@obys.agency">info@obys.agency</a></h5>
           </div>
         </div>
+        <div class="underline"></div>
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -282,12 +298,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <!-- Three.js is needed for 3d Effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
     <!-- ControlKit is needed for Debug Panel -->

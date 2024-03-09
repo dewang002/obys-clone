@@ -1,6 +1,6 @@
 @font-face {
   font-family: "plainregular";
-  src: url(plain-regular-webfont.woff);
+  src: url(./ASSET/plain-regular-webfont.woff);
 }
 * {
   margin: 0;
@@ -11,13 +11,38 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: rgb(32, 31, 31);
+  background-color: #151515;
   color: rgb(253, 251, 251);
 }
-main{
+main {
   position: relative;
 }
-
+#flag {
+  height: 20vw;
+  width: 30vw;
+  border-radius: 50px;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  /* background-color: red; */
+}
+#flag .top {
+  height: 33.3%;
+  width: 100%;
+  background-color: rgb(209, 138, 5);
+}
+#flag .mid {
+  height: 33.3%;
+  width: 100%;
+  background-color: rgb(188, 188, 188);
+}
+#flag .bottom {
+  height: 33.3%;
+  width: 100%;
+  background-color: green;
+}
 #crsr {
   height: 45px;
   width: 45px;
@@ -25,7 +50,7 @@ main{
   position: fixed;
   mix-blend-mode: difference;
   /* border: 4px solid #ffffff; */
-  transform: translate(-50% ,-50%);
+  transform: translate(-50%, -50%);
   filter: blur(10px);
   background-color: #a8a7a7;
 }
@@ -34,10 +59,13 @@ main{
   align-items: center;
   gap: 10px;
 }
+.number h5 {
+  font-style: italic;
+}
 .line1 h6 {
   font-size: 6vw;
+  font-style: italic;
   transition: all ease 3s;
-  /* background-color: red; */
   width: 5vw;
 }
 .line1 .number {
@@ -68,7 +96,7 @@ main{
   font-size: 6.8vw;
   /* background-color: red; */
 }
-.line h1:nth-child(1){
+.line h1:nth-child(1) {
   height: 15vh;
   /* background-color: green; */
 }
@@ -171,8 +199,8 @@ nav .navPart2 h3 {
 .heroline:nth-child(2) {
   margin-top: 8.5vw;
 }
-#hero1 h1::before{
-  content: '01';
+#hero1 h1::before {
+  content: "01";
   position: absolute;
   margin-left: -10%;
   font-size: 4vw;
@@ -190,6 +218,9 @@ nav .navPart2 h3 {
 .heroline {
   display: flex;
 }
+.heroline:nth-child(4) {
+  width: fit-content;
+}
 #hero3 h2 {
   font-size: 7vw;
   width: fit-content;
@@ -202,20 +233,16 @@ nav .navPart2 h3 {
 
 #hero3 h2:hover {
   z-index: 999;
-  -webkit-text-stroke: 1px #d0d0d0;
+  mix-blend-mode: difference;
+  -webkit-text-stroke: 1px #ffffff;
   font-weight: 500;
   border-bottom: 0.8vw solid #ffffff00;
   color: transparent;
 }
-#hero3 h3:hover {
-  -webkit-text-stroke: 1px #d0d0d0;
-  font-weight: 500;
-  border-bottom: none;
-  color: transparent;
-}
+
 /* ===================================================PAGE2 */
 #page2 {
-  height: 90vh;
+  min-height: 95vh;
   width: 100%;
   /* background-color: red; */
 }
@@ -226,9 +253,17 @@ nav .navPart2 h3 {
   margin-left: 28%;
   height: 85vh;
 }
-.videocontent img {
+/* .videocontent img {
   position: absolute;
-  height: 110%;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+} */
+.videocontent #mainImg {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  height: 99%;
   width: 100%;
   z-index: 2;
 }
@@ -254,8 +289,14 @@ nav .navPart2 h3 {
 .videoBtn img {
   height: 5vh;
   width: 2vw;
+  display: block;
 }
-#page6{
+.videoBtn i {
+  font-size: 3vw;
+  display: none;
+}
+/* ================================================ */
+#page6 {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -271,7 +312,7 @@ nav .navPart2 h3 {
   margin-bottom: 4vw;
   /* background-color: red; */
 }
-#page6 .imgdiv{
+#page6 .imgdiv {
   height: 66vh;
   width: 22vw;
   opacity: 1;
@@ -279,16 +320,16 @@ nav .navPart2 h3 {
   /* margin: 10%; */
   background-color: red;
 }
-#page6 .imgcontainer{
+#page6 .imgcontainer {
   position: relative;
-  gap:1vw;
+  gap: 1vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   /* background-color: red; */
   padding: 4vw;
 }
-#page6 .imgcontainer .circular{
+#page6 .imgcontainer .circular {
   height: 40vh;
   width: 20vw;
   border: 1px solid white;
@@ -296,31 +337,30 @@ nav .navPart2 h3 {
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: #201F1F;
+  background-color: #201f1f;
 }
-#page6 .imgcontainer .circular i{
+#page6 .imgcontainer .circular i {
   font-size: 9vw;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   position: absolute;
 }
 
-#page6 .imgdiv img{
+#page6 .imgdiv img {
   position: absolute;
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
-#page6 .circular:hover .word{
+#page6 .circular:hover .word {
   scale: 1;
-  
 }
-#page6 .circular:hover p{
- scale: 1;
- opacity: 1;
+#page6 .circular:hover p {
+  scale: 1;
+  opacity: 1;
 }
-.word{
+.word {
   transition: all ease-in 0.2s;
   height: 100%;
   width: 100%;
@@ -334,22 +374,22 @@ nav .navPart2 h3 {
   border-radius: 50%;
 }
 
-.word p{
-  scale:0;
+.word p {
+  scale: 0;
   opacity: 0;
   transition: all ease-in 0.1s;
   transition-delay: 0.4s;
   font-size: 1vw;
   font-weight: 100;
 }
-#page6 .imgcontainer:nth-child(3) .circular{
+#page6 .imgcontainer:nth-child(3) .circular {
   rotate: -180deg;
   /* background-color: green; */
 }
-#page6 .imgcontainer:nth-child(3) .circular p{
+#page6 .imgcontainer:nth-child(3) .circular p {
   rotate: 180deg;
 }
-
+/* ------------------------------------------------------ */
 #page3 {
   min-height: 100vh;
   width: 100%;
@@ -358,7 +398,7 @@ nav .navPart2 h3 {
   display: flex;
   justify-content: center;
 }
-#page3 .head h1::before{
+#page3 .head h1::before {
   content: "03";
   font-size: 3vw;
   position: absolute;
@@ -444,7 +484,6 @@ nav .navPart2 h3 {
   min-height: 100vh;
   width: 100%;
 }
-
 .scroll1 {
   overflow-x: hidden;
   white-space: nowrap;
@@ -466,7 +505,7 @@ nav .navPart2 h3 {
   /* background-color: red; */
   margin-right: 16px;
   animation-name: anime;
-  animation-duration:8s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -486,11 +525,11 @@ nav .navPart2 h3 {
   animation-iteration-count: infinite;
   animation-direction: reverse;
 }
-.scroll1 span{
+.scroll1 span {
   font-style: italic;
   font-family: "silk serif";
 }
-.scroll2 span{
+.scroll2 span {
   font-style: italic;
   font-family: "silk serif";
 }
@@ -502,34 +541,37 @@ nav .navPart2 h3 {
     transform: translateX(calc(-100% - 20px));
   }
 }
-#page5{
+#page5 {
   padding-top: 1vw;
   min-height: 100vh;
   width: 72%;
   margin-left: 28%;
   /* background-color: red; */
- 
 }
-#page5 h1::before{
+#page5 h1::before {
   content: "04";
   position: absolute;
   font-size: 4vw;
   margin-left: -10%;
-  font-family:"silk serif";
+  font-family: "silk serif";
   font-style: italic;
 }
-#page5 h1{
+#page5 h1 {
   font-size: 7.5vw;
   margin-bottom: 3vw;
   font-weight: 300;
   font-family: plainregular;
   line-height: 18vw;
+
   /* background-color: green;  */
-  border-bottom: 2px solid rgb(248, 248, 247);
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
-#page5 .details{
+#page5 .header h1 {
+  width: fit-content;
+}
+#page5 .details {
   display: flex;
-  margin-top:4vw ;
+  margin-top: 4vw;
   justify-content: space-between;
   padding-right: 9vw;
   border-bottom: 2px solid white;
@@ -537,45 +579,393 @@ nav .navPart2 h3 {
   padding-bottom: 5vw;
   padding-top: 4vw;
 }
-.details h4{
+.details h4 {
   font-family: plainregular;
   font-weight: 100;
   padding-bottom: 1.5vw;
 }
-.details h5{
+.details h5 {
   font-family: plainregular;
   font-size: 1.4vw;
   font-weight: 100;
 }
-.address{
+.address {
   width: 20%;
   /* background-color: red; */
 }
-.email a{
+.email a {
   color: white;
 }
-#page6 .underline{
+#page6 .underline {
   position: absolute;
   background-color: rgb(255, 255, 255);
-  
 }
-#page6 h1::before{
-  content: '02';
+#page6 h1::before {
+  content: "02";
   position: absolute;
   font-size: 3vw;
   margin-top: 1vw;
   margin-left: -10%;
-  font-family:"silk serif";
+  font-family: "silk serif";
   font-style: italic;
   /* background-color: red; */
 }
 
-
-
-
-
-._canvas_container{
-z-index: 999999 !important;
-pointer-events: none;
+._canvas_container {
+  z-index: 999999 !important;
+  pointer-events: none;
 }
+/* =============================mobile version */
+@media (max-width: 600px) {
+  .underline {
+    position: relative;
+    margin-left: 0.1%;
+    margin-bottom: 8vw;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(153, 134, 134);
+  }
+  #crsr {
+    display: none;
+  }
+  body {
+    background-color: #151515;
+  }
+  #page1 {
+    height: 30vh;
+  }
+  nav {
+    height: 8vw;
+    width: 100%;
+    padding: 0vw 4vw;
+    top: 0;
+    position: fixed;
+  }
+  nav .navPart1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.2vw;
+  }
+  nav .navPart1 img {
+    height: 100px;
+    width: 100px;
+  }
+  nav .navPart2 {
+    display: none;
+  }
 
+  .heroline {
+    top: 20vw;
+    margin-left: 4%;
+    position: relative;
+    z-index: 999;
+  }
+  .heroline:nth-child(2) {
+    margin-top: 8.5vw;
+  }
+  #hero1 h1::before {
+    content: "01";
+    position: absolute;
+    margin-left: 0.5%;
+    margin-top: -8%;
+    font-size: 5vw;
+    font-style: italic;
+    font-family: "slik serif";
+  }
+  .heroline h1 {
+    font-size: 9vw;
+    font-weight: 500;
+    line-height: 10vw;
+  }
+  .heroline:nth-child(4) {
+    width: fit-content;
+  }
+  #hero3 h2 {
+    text-transform: uppercase;
+    font-size: 9vw;
+    font-weight: 500;
+    font-family: plainregular;
+    border-bottom: 1vw solid #fff;
+  }
+  /* ------------------------------------------------- */
+  #page2 {
+    min-height: 66vh;
+    width: 100%;
+    /* background-color: red; */
+  }
+  .videocontent {
+    top: 10vh;
+    position: relative;
+    width: 100%;
+    margin-left: 0%;
+    height: 40vh;
+  }
+
+  .videocontent #mainImg {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 99%;
+    width: 100%;
+    z-index: 2;
+  }
+  .videocontent video {
+    position: relative;
+    height: 99%;
+    width: 100%;
+    display: none;
+  }
+  .videoBtn {
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 25vw;
+    width: 25vw;
+    right: 25%;
+    top: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffa63d;
+  }
+  .videoBtn img {
+    height: 2vh;
+    width: 3vw;
+    display: block;
+  }
+  /* ------------------------------------------------- */
+  #page6 {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 40vw;
+    /* background-color: rgb(0, 255, 238); */
+  }
+  #page6 .header h1 {
+    position: relative;
+    font-family: plainregular;
+    font-weight: 500;
+    font-size: 10vw;
+    margin-bottom: 4vw;
+    margin-left: 4%;
+    /* background-color: red; */
+  }
+  #page6 .imgdiv {
+    height: 60vh;
+    width: 90vw;
+    opacity: 1;
+    position: relative;
+    margin-top: 13vw;
+    margin-left: 2%;
+  }
+
+  #page6 .imgcontainer {
+    position: relative;
+    gap: 1vw;
+    display: flex;
+    align-items: center;
+  }
+  #page6 .imgcontainer .circular {
+    display: none;
+  }
+  #page6 h1::before {
+    font-size: 5vw;
+    margin-top: -15vw;
+    margin-left: 1%;
+  }
+  /* ---------------------------------------------------- */
+  #page3 {
+    min-height: 100vh;
+    width: 100%;
+    margin-right: 97%;
+  }
+  .underline:nth-child(3) {
+    background-color: rgb(22, 5, 5);
+  }
+  #page3 .head {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #page3 .head h1::before {
+    font-size: 5vw;
+    margin-top: -15vw;
+    margin-left: 1%;
+  }
+  #page3 .head h1 {
+    position: relative;
+    font-family: plainregular;
+    font-weight: 500;
+    font-size: 10vw;
+    margin-bottom: 4vw;
+    margin-left: 4%;
+  }
+
+  #page3 .head2 {
+    margin: 5vw 0;
+    margin-bottom: 4vw;
+    position: relative;
+    /* background-color: red; */
+    width: 80%;
+    left: 4%;
+  }
+  #page3 .head2 h1 {
+    font-weight: 100;
+    font-size: 6vw;
+    font-family: plainregular;
+  }
+
+  #page3 .imgdet {
+    display: block;
+    /* background-color: red; */
+    gap: 1vw;
+  }
+  #page3 .head2::after {
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magniconsectetur quaerat obcaecati repellat asperiores illum cupiditateat beatae hic iustod";
+    position: relative;
+    display: block;
+    width: 90%;
+    padding-top: 4vw;
+    /* background-color:red; */
+    font-size: 3vw;
+    font-family: plainregular;
+  }
+  #page3 .imgdet::before {
+    content: "Would you like to have award winning site or unique branding style, please say hi to our manager —info@obys.agency.And we will help you with the pleasure.";
+    position: relative;
+    display: block;
+    width: 80%;
+    padding-top: 4vw;
+    margin-left: 4%;
+    /* background-color:red; */
+    font-size: 3vw;
+    font-family: plainregular;
+  }
+  #page3 img {
+    object-fit: cover;
+    height: 70vh;
+    width: 100%;
+    margin-top: 20vw;
+    margin-left: 0%;
+  }
+  #page3 .imgdet p {
+    display: none;
+  }
+  #page3 .bluebox {
+    position: relative;
+    left: 0%;
+    margin-top: 0%;
+    height: 80vh;
+    width: 100%;
+    background-color: #3f7df4;
+    padding: 2px 13px 4px 13px;
+    padding-bottom: 50px;
+    margin-bottom: 40vw;
+  }
+  .bluebox .elem {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(199, 196, 196);
+
+    /* background-color: red; */
+  }
+  .bluebox .elem h1 {
+    font-size: 4vw;
+    font-weight: 100;
+    font-family: serif;
+    width: 60%;
+    /* background-color: yellow; */
+  }
+  .bluebox .elem p {
+    width: 50%;
+    font-size: 4vw;
+    font-weight: 100;
+    font-family: serif;
+    /* background-color: green; */
+  }
+  /* --------------------------------------------------------------------------------------------------- */
+  #page4 {
+    min-height: 60vh;
+    width: 100%;
+    margin-bottom: 10vw;
+  }
+  .scroll1:nth-child(1) {
+    margin-top: 24vw;
+    /* background-color: red; */
+  }
+
+  .scroll1 h1 {
+    -webkit-text-stroke: 1px white;
+    font-size: 15vw;
+  }
+  .scroll2 h1 {
+    -webkit-text-stroke: 1px white;
+    font-size: 15vw;
+  }
+  /* ------------------------------------------------------------------------------------------------- */
+  #page5 {
+    padding-top: 1vw;
+    min-height: 50vh;
+    width: 93%;
+    margin-left: 4%;
+    /* background-color: red; */
+  }
+  #page5 h1::before {
+    font-size: 5vw;
+    margin-top: -15vw;
+    margin-left: 1%;
+  }
+  #page5 h1 {
+    font-size: 12vw;
+    margin-bottom: 3vw;
+    font-weight: 300;
+    font-family: plainregular;
+    line-height: 18vw;
+    border-bottom: none;
+    /* background-color: green;  */
+  }
+  #page5 .header h1 {
+    width: fit-content;
+  }
+  #page5 .details {
+    display: flex;
+    margin-top: 4vw;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding-right: 9vw;
+    border-bottom: none;
+    padding-bottom: 5vw;
+    padding-top: 4vw;
+    /* background-color: #3f7df4; */
+  }
+  .details h4 {
+    font-family: plainregular;
+    font-weight: 100;
+    font-size: 6vw;
+    padding-bottom: 1.5vw;
+  }
+  .details h5 {
+    font-family: plainregular;
+    font-size: 4.3vw;
+    line-height: 6vw;
+    font-weight: 100;
+  }
+  .address {
+    margin-left: 5vw;
+    width: 20%;
+    /* background-color: red; */
+  }
+  .email {
+    margin-left: 10vw;
+  }
+  .email h4 {
+    margin-left: 5vw;
+  }
+  .email a {
+    color: white;
+  }
+}
