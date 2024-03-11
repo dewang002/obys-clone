@@ -556,6 +556,9 @@ nav .navPart2 h3 {
   font-family: "silk serif";
   font-style: italic;
 }
+#page5 .underline {
+  display: none;
+}
 #page5 h1 {
   font-size: 7.5vw;
   margin-bottom: 3vw;
@@ -629,6 +632,7 @@ nav .navPart2 h3 {
     display: none;
   }
   body {
+    overflow: scroll;
     background-color: #151515;
   }
   #page1 {
@@ -918,6 +922,9 @@ nav .navPart2 h3 {
     font-size: 5vw;
     margin-top: -15vw;
     margin-left: 1%;
+  }
+  #page5 .underline{
+    display: block;
   }
   #page5 h1 {
     font-size: 12vw;

@@ -1,4 +1,6 @@
 let video = document.querySelector(".videocontent video");
+const videoBtn = document.querySelector(".videoBtn");
+let videoContainer = document.querySelector(".videocontent");
 gsap.registerPlugin(ScrollTrigger);
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
@@ -84,8 +86,8 @@ function loading() {
 }
 loading();
 
-const videoBtn = document.querySelector(".videoBtn");
-let videoContainer = document.querySelector(".videocontent");
+ 
+
 videoContainer.addEventListener("mouseenter", function () {
   videoContainer.addEventListener("mousemove", function (elem) {
     gsap.to(videoBtn, {
@@ -211,19 +213,28 @@ videoBtn.addEventListener("click", function () {
   change();
 });
 
-
-    let isPlaying = false;
-
+let isPlaying = false;
     function toggleVideo() {
       if (!isPlaying) {
+        i.style.display = "none";
+        document.querySelector(".videoBtn img").style.display = "block";
         video.pause();
+        videoBtn.style.scale=1
+        videoBtn.style.opacity="1"
+        gsap.to(".videocontent #mainImg", {
+          opacity: 1,
+        });
       } else {
+        i.style.display = "block";
+        document.querySelector(".videoBtn img").style.display = "none";
         video.play();
-        videoBtn.style.scale=0.5
+        videoBtn.style.scale="0.5"
+        videoBtn.style.opacity="0.5"
       }
       isPlaying = !isPlaying;
     }
-
     // Using touchstart and touchend events
     videoBtn.addEventListener('touchstart', toggleVideo);
-    videoBtn.addEventListener('touchend', toggleVideo);
+    // videoBtn.addEventListener('touchend', toggleVideo);
+
+   
